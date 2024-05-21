@@ -299,6 +299,7 @@ function getUpdatedRequestOptions(options) {
     // set headers
     options.headers = getUpdatedRequestHeaders(options.headers);
     options.timeout = TIMEOUT;
+    options.headers['Authorization']=`Basic ${config['x-auth-token']}`
 
     if (!options.headers.cookie) {
         // remove undefined cookie

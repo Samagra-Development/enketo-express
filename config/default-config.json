@@ -1,6 +1,7 @@
 {
     "app name": "Enketo Smart Paper for KoBoCAT",
     "port": "8005",
+    "x-auth-token": "central authentication token encrypted in base64 format <username:password>",
     "max processes": 16,
     "offline enabled": true,
     "id length": 8,

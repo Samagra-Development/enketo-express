@@ -16,6 +16,7 @@ const controllersPath = path.join(__dirname, '../app/controllers');
 const app = express();
 const debug = require('debug')('enketo:express');
 const config = require('../app/models/config-model');
+const cors = require('cors');
 
 // general
 for (const item in config.server) {
@@ -67,6 +68,7 @@ app.i18next = i18next;
 // middleware
 
 app.use(requestContextMiddleware);
+app.use(cors({ origin: '*' }));
 app.use(compression());
 app.use(
     bodyParser.json({
