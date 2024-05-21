@@ -68,6 +68,8 @@ app.i18next = i18next;
 // middleware
 
 app.use(requestContextMiddleware);
+
+// Add your origins here
 app.use(cors({ origin: '*' }));
 app.use(compression());
 app.use(
